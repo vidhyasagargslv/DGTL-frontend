@@ -75,7 +75,7 @@ export default function Getdetails() {
         <p>No data found</p>
       ) : (
         <div className="overflow-x-auto">
-          <table className="table table-zebra table-lg max-sm:table-sm">
+          <table className="table table-zebra table-md">
             <thead>
               <tr>
                 <th>Name</th>
