@@ -36,18 +36,18 @@ export default function AddEmployee() {
   
   
     return (
-      <div className="flex flex-col justify-center items-center -mt-10 ">
-        <h2 className="text-[1.7rem] text-center mb-5 font-bold uppercase text-violet-700 tracking-wide">
+      <div className="flex flex-col justify-start items-center mt-7 ">
+        <h2 className="text-[2rem] text-center mb-5 font-bold uppercase text-violet-700 tracking-wide">
           Fill the employee details
         </h2>
         <form
           onSubmit={handleSubmit}
           className="flex flex-col justify-center items-center gap-5"
         >
-          <label className="input w-56 input-bordered flex items-center gap-2">
+          <label className="input w-72 input-bordered flex items-center gap-2">
             <input
               type="text"
-              className="w-14 grow"
+              className="grow"
               placeholder="Enter name"
               name="name"
               value={newEmployee.name}
@@ -55,7 +55,7 @@ export default function AddEmployee() {
               required
             />
           </label>
-          <label className="input w-56 input-bordered flex items-center gap-2">
+          <label className="input w-72 input-bordered flex items-center gap-2">
             <input
               type="text"
               className=" grow"
@@ -66,11 +66,11 @@ export default function AddEmployee() {
               required
             />
           </label>
-          <label className="input w-56 input-bordered flex items-center gap-2">
+          <label className="input w-72 input-bordered flex items-center gap-2">
             <input
               type="text"
               className=" grow"
-              placeholder="Position"
+              placeholder="Position or role"
               name="position"
               value={newEmployee.position}
               onChange={handleChange}
@@ -79,7 +79,7 @@ export default function AddEmployee() {
           </label>
           <button
             type="submit"
-            className="btn btn-info btn-outline hover:btn-info"
+            className="btn btn-primary btn-outline hover:btn-primary"
             
           >
             Add Employee

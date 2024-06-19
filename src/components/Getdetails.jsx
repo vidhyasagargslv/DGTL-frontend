@@ -41,8 +41,8 @@ export default function Getdetails() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-start gap-7 mt-7">
-      <h2 className="text-[1.7rem] text-violet-600 text-center font-bold uppercase tracking-wide">
+    <div className="flex flex-col items-center justify-start gap-7 mt-6">
+      <h2 className="text-[2rem] text-violet-600 text-center font-bold uppercase tracking-wider">
         Search Employees
       </h2>
       <label className="input input-bordered flex items-center gap-2">
@@ -57,7 +57,7 @@ export default function Getdetails() {
         <kbd className="kbd kbd-sm">⌘</kbd>
         <kbd className="kbd kbd-sm">K</kbd>
       </label>
-      <div className="cta flex flex-row gap-5">
+      <div className="cta flex  flex-row-reverse gap-5">
       <button
         onClick={handleSearch}
         className="btn btn-primary btn-outline w-36"
@@ -65,7 +65,7 @@ export default function Getdetails() {
         Search
       </button>
 
-      <button className='btn btn-error btn-outline w-24 hover:btn-error'
+      <button className='btn btn-error btn-outline w-28 hover:btn-error'
       onClick={handleclearsearch}>
         clear search
       </button>
