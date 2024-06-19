@@ -9,7 +9,7 @@ export default function Getdetails() {
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/employee?query=${query}`
+        `https://dgtl-backend1.onrender.com/employee?query=${query}`
       );
       setEmployees(response.data);
     } catch (error) {

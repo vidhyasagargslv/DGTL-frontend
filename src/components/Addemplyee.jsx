@@ -18,15 +18,21 @@ export default function AddEmployee() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-          const response = await axios.post('http://localhost:5000/add/employee', newEmployee);
+          const response = await axios.post('https://dgtl-backend1.onrender.com/add/employee', newEmployee);
           console.log('Added new employee:', response.data);
           setNewEmployee({ name: '', from: '', position: '' });
           setIsSaved(true);
-          toast.success("Emloyee details are added to database");
+          toast.success("Employee details are added to database");
       } catch (error) {
           console.error('Error adding employee: ', error);
+          // Enhanced error handling
+          if (error.code === 'ERR_NETWORK') {
+              toast.error("Network error. Please check your connection and try again.");
+          } else {
+              toast.error("An error occurred. Please try again later.");
+          }
       }
-  };
+    };
   
   
     return (
