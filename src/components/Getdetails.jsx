@@ -42,7 +42,7 @@ export default function Getdetails() {
 
   return (
     <div className="flex flex-col items-center justify-start gap-7 mt-6">
-      <h2 className="text-[2rem] text-violet-600 text-center font-bold uppercase tracking-wider">
+      <h2 className="text-[2rem] text-violet-600 text-center font-bold uppercase tracking-wider max-sm:text-[1.7rem]">
         Search Employees
       </h2>
       <label className="input input-bordered flex items-center gap-2">
@@ -75,7 +75,7 @@ export default function Getdetails() {
         <p>No data found</p>
       ) : (
         <div className="overflow-x-auto">
-          <table className="table table-zebra table-lg">
+          <table className="table table-zebra table-lg max-sm:table-sm">
             <thead>
               <tr>
                 <th>Name</th>

@@ -20,12 +20,12 @@ export default function Main() {
 
   return (
     <div className="bg-slate-700 w-full h-screen flex flex-col items-center gap-10">
-      <div className="heading text-7xl font-semibold tracking-widest  text-center font-serif text-orange-50 pt-9">
+      <div className="heading text-7xl font-semibold tracking-widest  text-center font-serif text-orange-50 pt-9 max-sm:text-4xl">
         DGTLMART
       </div>  
       <div className="options flex flex-wrap gap-6 justify-center items-center ">
         <div
-          className="addemployee btn  btn-primary text-center text-lg cursor-pointer"
+          className="addemployee btn w-52  btn-primary text-center text-lg cursor-pointer"
           onClick={handleClickAddEmployee}
         >
           Add employee
@@ -37,7 +37,7 @@ export default function Main() {
           Get employee details
         </div>
       </div>
-    <div className='w-[70%] h-[30rem] flex justify-center bg-cyan-100 rounded-2xl'>
+    <div className='w-[70%] h-[30rem] flex justify-center bg-cyan-100 rounded-2xl max-sm:w-full'>
       {showAddEmployee && <AddEmployee />}
       {showGetDetails && <GetDetails />}
       </div>

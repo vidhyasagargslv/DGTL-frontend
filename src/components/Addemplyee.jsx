@@ -19,7 +19,7 @@ export default function AddEmployee() {
       e.preventDefault();
       try {
           const response = await axios.post('https://dgtl-backend1.onrender.com/add/employee', newEmployee);
-          console.log('Added new employee:', response.data);
+          
           setNewEmployee({ name: '', from: '', position: '' });
           setIsSaved(true);
           toast.success("Employee details are added to database");
@@ -37,7 +37,7 @@ export default function AddEmployee() {
   
     return (
       <div className="flex flex-col justify-start items-center mt-7 ">
-        <h2 className="text-[2rem] text-center mb-5 font-bold uppercase text-violet-700 tracking-wide">
+        <h2 className="text-[2rem] text-center mb-5 font-bold uppercase text-violet-700 tracking-wide max-sm:text-[1.7rem]">
           Fill the employee details
         </h2>
         <form
